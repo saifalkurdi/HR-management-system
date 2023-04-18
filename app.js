@@ -1,69 +1,57 @@
-function Employee(EmployeeID, Fullname, Department, Level, Imageurl){
-this.EmployeeID = EmployeeID
-this.Fullname = Fullname
-this.Department = Department
-this.Level = Level
-this.Imageurl = Imageurl
+"use strict";
+
+function Employee (fullName, departement, level) {
+  this.fullName = fullName;
+  this.departement = departement;
+  this.level = level;
 }
 
-Employee.prototype.calculateSalary = function(level){
-  let minJunior = 500;
-  let maxJunior = 1000;
-  let minMidSenoir = 1000;
-  let maxMidSenior = 1500;
-  let minSenior = 1500;
-  let maxSenior = 2000;
-  let salary;
-if(level === 'Junior')
-{
-  salary = Math.floor(Math.random() * (maxJunior - minJunior + 1) + minJunior)
-}
-else if(level==='Mid-Senior'){
-  salary = Math.floor(Math.random() * (maxMidSenior - minMidSenoir + 1) + minMidSenoir)
-}
-else{
-  salary = Math.floor(Math.random() * (maxSenior - minSenior + 1) + minSenior)
+// const obj = new Employee('saif','marketing','junior');
+// console.log(obj)
 
-}
-let netSalary = salary-(salary*(7.5/100))
-return netSalary; 
-}
+// generate four digits unique id
 
+// Render the data
 Employee.prototype.render = function(){
-  let name = this.Fullname;
-  let salary = this.calculateSalary(this.Level);
-  const nameElement = document.createElement('span');
-  const salaryElement = document.createElement('span');
-  const employeeElement = document.createElement('div')
-  nameElement.textContent =name 
-  salaryElement.textContent = salary
+  const Employee = document.getElementById('employeeEle');
+  // creat an Elementmnt
+  // append the elemnt to the parent
+  // adding the text to the created elemnt
+  const divEle = document.createElement('div');
+  employeeEle.appendChild(divEle);
 
-  const employeesElement = document.getElementById('employees')
+  const pEle = document.createElement('p');
+  pEle.textContent = this.fullName;
+divEle.appendChild(pEle)
 
-  employeeElement.appendChild(nameElement);
-  employeeElement.appendChild(salaryElement);
+const p1Ele = document.createElement('p');
+  p1Ele.textContent = this.departement;
+divEle.appendChild('p1Ele')
 
-  employeesElement.appendChild(employeeElement)
-};
-
-
-const employees = [
-  new Employee(1000, 'Ghazi Samer', 'Administration', 'Senior'),
-  new Employee(1001, 'Lana Ali', 'Finance', 'Senior'	),
-  new Employee(1002, 'Tamara Ayoub', 'Marketing', 'Senior'),
-  new Employee(1003, 'Safi Walid', 'Administration', 'Mid-Senior'),
-  new Employee(1004	, 'Omar Zaid	', 'Development	', 'Senior'),
-  new Employee(1005, 'Rana Saleh	','Development', 'Junior'),
-  new Employee(1006, 'Hadi Ahmad	', 'Finance	','Mid-Senior'),
-];
-
-for(let i = 0; i<employees.length; i++){
-  employees[i].render()
+const p2Ele = document.createElement('p');
+  p2Ele.textContent = this.level;
+divEle.appendChild('p2Ele')
 }
 
 
 
 
 
+// Adding new order from the form
+function addNewData(employeedata) {
+  employeedata.preventDefault();
+  // console.log(employeedata.target.fullName.value)
+  // console.log(employeedata.target.dep.value)
+  // console.log(employeedata.target.lev.value)
+  let fullName = employeedata.target.fullName.value;
+  let departement = employeedata.target.departement.value;
+  let level = employeedata.target.level.value;
+  const newForm = new Employee(fullName, departement, level);
+  console.log(newForm);
+}
 
 
+
+const employeeForm = document.getElementById("employeeForm");
+// console.log(employeeInformation)
+employeeForm.addEventListener("submit", addNewData);
