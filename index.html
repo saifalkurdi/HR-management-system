@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./css/reset.css">
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
   <link rel="stylesheet" href="./css/styles.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +11,35 @@
 <body>
   <header>
     <nav>
-      <a href="./accounting.html">Accounting</a>
+      <a class="Acc" href="./accounting.html">Accounting</a>
     </nav>
   </header>
   <main>
-    <div id="employees" >
-    </div>
+   <section>
+    <fieldset>
+      <legend>Employees-Information</legend>
+
+      <form id="employeeForm">
+        <div>
+          <label for="fullName">Name</label>
+          <input type="text" name="fullName" id="fullName">
+        </div>
+        <div>
+          <label for="deparetement">Department</label>
+          <input type="text" name="department" id="departement">
+        </div>
+        <div>
+          <label for="level">Level</label>
+          <input type="text" name="level" id="level">
+        </div>
+        <button type="submit">Submit</button>
+        <img src="" alt="">
+      </form>
+    </fieldset>
+   </section>
+    <section id="employeeEle">
+
+    </section>
   </main>
   <footer>
     <div class="social-media">
