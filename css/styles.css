@@ -46,9 +46,6 @@ align-items: center;
   text-decoration: none;
 }
 
-.social-media a :hover{
-  opacity: 0.5px;
-}
 main{
   height: 100vh;
 

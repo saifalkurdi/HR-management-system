@@ -1,3 +1,4 @@
 # HR-management-system
-the first ques: i learned many things but it is difficult to me beacause i see many videos to create the constuct fuction.
-the second ques: it take of me alot of time.
+I do the render but it doesnt appear on the sreen.
+question one : i face a defecult to understand this type of code.
+question 2: it takes from me about 5 hours to understand.
