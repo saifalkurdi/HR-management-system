@@ -1,36 +1,40 @@
 "use strict";
-
-function Employee (fullName, departement, level) {
+// constructor function
+function Employee (fullName, department, level,) {
   this.fullName = fullName;
-  this.departement = departement;
+  this.department = department;
   this.level = level;
+ 
 }
 
 // const obj = new Employee('saif','marketing','junior');
 // console.log(obj)
 
 // generate four digits unique id
-
+// prototype
 // Render the data
 Employee.prototype.render = function(){
   const Employee = document.getElementById('employeeEle');
+  let unique = Math.ceil(Math.random()*10000)
   // creat an Elementmnt
   // append the elemnt to the parent
   // adding the text to the created elemnt
-  const divEle = document.createElement('div');
-  employeeEle.appendChild(divEle);
-
+  const pEle3 = document.createElement('p')
   const pEle = document.createElement('p');
+  const p1Ele = document.createElement('p');
+  const p2Ele = document.createElement('p');
+  const divEle = document.createElement('div');
+ 
+  pEle3.textContent = unique
   pEle.textContent = this.fullName;
-divEle.appendChild(pEle)
-
-const p1Ele = document.createElement('p');
-  p1Ele.textContent = this.departement;
-divEle.appendChild('p1Ele')
-
-const p2Ele = document.createElement('p');
+  p1Ele.textContent = this.department;
   p2Ele.textContent = this.level;
-divEle.appendChild('p2Ele')
+
+divEle.appendChild(pEle3)
+  divEle.appendChild(pEle)
+  divEle.appendChild(p1Ele)
+  divEle.appendChild(p2Ele)
+  Employee.appendChild(divEle);
 }
 
 
@@ -44,9 +48,10 @@ function addNewData(employeedata) {
   // console.log(employeedata.target.dep.value)
   // console.log(employeedata.target.lev.value)
   let fullName = employeedata.target.fullName.value;
-  let departement = employeedata.target.departement.value;
+  let department = employeedata.target.department.value;
   let level = employeedata.target.level.value;
-  const newForm = new Employee(fullName, departement, level);
+  const newForm = new Employee(fullName, department, level);
+  newForm.render()
   console.log(newForm);
 }
 

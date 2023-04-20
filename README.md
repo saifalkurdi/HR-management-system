@@ -1,3 +1,4 @@
 # HR-management-system
-the first ques: i learned many things but it is difficult to me beacause i see many videos to create the constuct fuction.
-the second ques: it take of me alot of time.
+## in this branch i fix the proplem that i had 
+### vquestion one : i face a defecult to understand this type of code.
+#### question 2: it takes from me about 8 hours to create the project.
