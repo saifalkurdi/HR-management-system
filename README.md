@@ -1,4 +1,4 @@
 # HR-management-system
-I do the render but it doesnt appear on the sreen.
-question one : i face a defecult to understand this type of code.
-question 2: it takes from me about 5 hours to understand.
+## in this branch i fix the proplem that i had 
+### vquestion one : i face a defecult to understand this type of code.
+#### question 2: it takes from me about 8 hours to create the project.
