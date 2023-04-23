@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./css/reset.css">
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
   <link rel="stylesheet" href="./css/styles.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +11,25 @@
 <body>
   <header>
     <nav>
-      <a href="">Accounting</a>
+      <a class="Acc" href="/index.html">Index</a>
     </nav>
   </header>
-  <main></main>
+  <main>
+    <table>
+      <thead>
+        <th>Department Name</th>
+        <th>Number of employees</th>
+        <th>Average Salary</th>
+        <th>Total Slary</th>
+      </thead>
+      <tbody id="tbody" ></tbody>
+      <tfoot>
+        <td id="totalNumber" ></td>
+        <td id="totalSalary" ></td>
+        <td id="avgSal" ></td>
+      </tfoot>
+    </table>
+  </main>
   <footer>
     <div class="social-media">
       <a href="https://www.facebook.com/">Facebook &copy;</a>
@@ -22,6 +37,7 @@
       <a href="https://twitter.com/?lang=ar">Twitter &copy;</a>
     </div>
   </footer>
-  
+  <script src="./accounting.js"></script>
+
 </body>
 </html>
